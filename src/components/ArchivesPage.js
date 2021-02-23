@@ -45,6 +45,9 @@ function ArchivesPage({ toggleVisibility }) {
           </div>
         </div>
       </div>
+      <p className="slide-info">
+        Slidez pour voir d'autres photos délicieuses ! 😋
+      </p>
     </section>
   );
 }

@@ -13,7 +13,11 @@ const Song = ({ src }) => {
     <div className="play-pause">
       <div className="buttons-play-pause flex items-center justify-center mx auto">
         <a href={src} download="ChansonDuJour.mp3">
-          <h3>Ecouter la chanson du jour (cliquer pour télécharger) : </h3>
+          <h3>
+            {" "}
+            <i className="fas fa-compact-disc" /> Ecouter la chanson du jour
+            (cliquer pour télécharger) :{" "}
+          </h3>
         </a>
         <button
           className="play"

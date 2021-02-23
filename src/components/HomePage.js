@@ -4,7 +4,9 @@ function HomePage({ toggleVisibility }) {
       className="container mx-auto md:w-4/6 homepage-section sm:w-full"
       id="homepage"
     >
-      <h1 className="homepage-title">Bienvenue chez Maison Salvi !</h1>
+      <h1 className="homepage-title flex items-center justify-center">
+        Bienvenue chez Maison Salvi ! <i className="fas fa-pepper-hot" />
+      </h1>
       <div className="flex justify-center flex-wrap homepage-centered">
         <div className="flex flex-col justify-around items-start md:w-1/2 sm:w-full homepage-left-text">
           <img
@@ -14,8 +16,10 @@ function HomePage({ toggleVisibility }) {
           />
 
           <p>
-            La Maison Salvi vous offre chaque jour le choix entre un menu crané
-            ou végé à 10 euros (livraison incluse, sur Rennes uniquement).
+            La Maison Salvi vous offre chaque jour le choix entre un menu carné{" "}
+            <i className="fas fa-hamburger" /> ou végé{" "}
+            <i className="fas fa-carrot" /> à 10 euros (livraison incluse, sur
+            Rennes uniquement).
           </p>
           <p>
             Des produits sains et simples, de saison, mis en musique et en
