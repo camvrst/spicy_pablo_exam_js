@@ -1,38 +1,300 @@
-.App {
+/* HEADER */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: white;
+}
+header img {
+  max-height: 80px;
+}
+header nav {
+  font-size: 18px;
+  color: #1e1e1e;
+  transition: all 0.2s ease-in-out;
+}
+header nav ul li {
+  position: relative;
+  cursor: pointer !important;
+}
+header nav ul li:before, header nav ul li:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0px;
+  height: 5px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.55s;
+  opacity: 0;
+  background-color: #e56438;
+  left: 0;
+}
+header nav ul li:hover:before, header nav ul li:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* SONG OF THE DAY */
+.play-pause .buttons-play-pause {
+  padding: 10px;
+}
+.play-pause .buttons-play-pause h3 {
+  color: #950b1b;
+  cursor: pointer;
+  font-weight: 500;
+}
+.play-pause .buttons-play-pause h3:hover {
+  color: #e25321;
+}
+.play-pause .buttons-play-pause i {
+  padding: 0 10px;
+  color: #f29c7b;
+  cursor: pointer;
+}
+.play-pause .buttons-play-pause i:hover {
+  color: #e25321;
+}
+
+/* HOMEPAGE WITH MENU */
+.homepage-section .homepage-title {
+  font-weight: bold;
   text-align: center;
+  font-size: 36px;
+  margin: 15px;
+  color: #f29c7b;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homepage-section .homepage-left-text {
+  background-color: white;
+  padding: 20px 50px;
+  min-height: 75vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepage-section .homepage-left-text .img-curry {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  object-fit: cover;
+}
+.homepage-section .homepage-left-text p {
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 10%;
+}
+.homepage-section .homepage-left-text button {
+  background-color: #950b1b;
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 16px 32px;
+  border-radius: 12px;
+}
+.homepage-section .homepage-left-text button:hover {
+  background-color: #f7c44f;
+}
+.homepage-section .chef-img {
+  min-height: 75vh;
+  object-fit: cover;
+  box-shadow: 30px 30px 0px #950b1b;
 }
 
-.App-link {
-  color: #61dafb;
+.homepage-centered {
+  min-height: 75vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* POP UP MENU */
+.pop-up-menu {
+  position: absolute;
+  top: 22vh;
+  left: 50%;
+  min-height: 75vh;
+  transform: translateX(-50%);
+  margin: auto;
 }
+.pop-up-menu .pop-content {
+  padding: 50px;
+}
+.pop-up-menu .pop-content h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 5px solid #950b1b;
+  margin-bottom: 15px;
+}
+.pop-up-menu .pop-content p {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.pop-up-menu .pop-content p ul {
+  list-style: square;
+  font-weight: bold;
+}
+.pop-up-menu .pop-content p ul li {
+  font-weight: normal;
+}
+.pop-up-menu .pop-content p .fa-whatsapp-square {
+  color: #f7c44f;
+  font-size: 30px;
+  padding-right: 10px;
+}
+
+.bg-popmenu {
+  background-color: #f29c7b;
+}
+
+.bg-popvoter {
+  background-color: #f7c44f;
+}
+
+/* PAGE WITH ARCHIVES */
+.archives-section {
+  margin-top: 100px;
+  padding-bottom: 25px;
+  background-color: #ece6e6;
+}
+.archives-section .archives-centered {
+  margin: auto;
+  height: 75vh;
+  background-color: #efdecc;
+  padding: 20px;
+  box-shadow: 20px 20px 0px #950b1b;
+}
+.archives-section .archives-centered h2 {
+  font-size: 56px;
+  line-height: 50px;
+  align-self: start;
+}
+.archives-section .archives-centered h2 span {
+  color: #950b1b;
+  font-weight: bold;
+}
+.archives-section .archives-centered p {
+  font-size: 16px;
+  padding-right: 10%;
+}
+.archives-section .archives-centered button {
+  background-color: #e25321;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 16px 32px;
+  border-radius: 12px;
+}
+.archives-section .archives-centered button:hover {
+  background-color: #f29c7b;
+}
+.archives-section .archives-centered .suricate {
+  position: relative;
+  padding-top: 50px;
+}
+.archives-section .archives-centered .suricate .splash-img {
+  position: absolute;
+}
+.archives-section .archives-centered .suricate .suricate-img {
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 55%;
+}
+.archives-section .caroussel {
+  margin: 50px auto;
+}
+.archives-section .caroussel img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 20px 10px;
+}
+
+/* POP UP FOR VOTE */
+.pop-up-voter {
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  height: 70vh;
+  transform: translateX(-50%);
+}
+.pop-up-voter .pop-content p {
+  font-weight: bold;
+}
+.pop-up-voter .pop-content .menu-content p {
+  font-weight: bold;
+  padding: 10px;
+}
+.pop-up-voter .pop-content .menu-content p ul li {
+  font-weight: normal;
+}
+.pop-up-voter .pop-content .menu-content p ul li input {
+  margin-right: 10px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 20px;
+}
+.footer p {
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+}
+.footer a:hover {
+  color: #e25321;
+}
+
+/* CAROUSEL */
+.carousel {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: #950b1b;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 10px #424242;
+  background: #ece6e6;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.slides > div img {
+  transition: 0.5s;
+}
+.slides > div img:hover {
+  transform: scale(1.5);
+}
+
+/*# sourceMappingURL=App.css.map */

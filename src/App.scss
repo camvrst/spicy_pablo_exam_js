@@ -1,0 +1,322 @@
+@import "variables";
+
+/* HEADER */
+* {
+  box-sizing: border-box;
+}
+header {
+  background-color: white;
+  img {
+    max-height: 80px;
+  }
+  nav {
+    font-size: 18px;
+    color: $black;
+    transition: all 0.2s ease-in-out;
+    ul {
+      li {
+        position: relative;
+        cursor: pointer !important;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          width: 0px;
+          height: 5px;
+          margin: 5px 0 0;
+          transition: all 0.2s ease-in-out;
+          transition-duration: 0.55s;
+          opacity: 0;
+          background-color: lighten($orange-color, 5%);
+          left: 0;
+        }
+        &:hover {
+          &:before,
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* SONG OF THE DAY */
+
+.play-pause {
+  .buttons-play-pause {
+    padding: 10px;
+    h3 {
+      color: $red-color;
+      cursor: pointer;
+      font-weight: 500;
+      &:hover {
+        color: $orange-color;
+      }
+    }
+    i {
+      padding: 0 10px;
+      color: $peach;
+      cursor: pointer;
+      &:hover {
+        color: $orange-color;
+      }
+    }
+  }
+}
+
+/* HOMEPAGE WITH MENU */
+
+.homepage-section {
+  .homepage-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    margin: 15px;
+    color: $peach;
+  }
+  .homepage-left-text {
+    background-color: white;
+    padding: 20px 50px;
+    min-height: 75vh;
+
+    .img-curry {
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      padding-right: 10%;
+    }
+    button {
+      background-color: $red-color;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 12px;
+      &:hover {
+        background-color: $yellow-color;
+      }
+    }
+  }
+  .chef-img {
+    min-height: 75vh;
+    object-fit: cover;
+    box-shadow: 30px 30px 0px $red-color;
+  }
+}
+
+.homepage-centered {
+  min-height: 75vh;
+}
+
+/* POP UP MENU */
+
+.pop-up-menu {
+  position: absolute;
+  top: 22vh;
+  left: 50%;
+  min-height: 75vh;
+  transform: translateX(-50%);
+  margin: auto;
+  .pop-content {
+    padding: 50px;
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 5px solid $red-color;
+      margin-bottom: 15px;
+    }
+    p {
+      font-weight: bold;
+      margin-top: 15px;
+      ul {
+        list-style: square;
+        font-weight: bold;
+        li {
+          font-weight: normal;
+        }
+      }
+      .fa-whatsapp-square {
+        color: $yellow-color;
+        font-size: 30px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.bg-popmenu {
+  background-color: $peach;
+}
+
+.bg-popvoter {
+  background-color: $yellow-color;
+}
+
+/* PAGE WITH ARCHIVES */
+
+.archives-section {
+  margin-top: 100px;
+  padding-bottom: 25px;
+  background-color: $white;
+
+  .archives-centered {
+    margin: auto;
+    height: 75vh;
+    background-color: $light-color;
+    padding: 20px;
+    box-shadow: 20px 20px 0px $red-color;
+    h2 {
+      font-size: 56px;
+      line-height: 50px;
+      align-self: start;
+      span {
+        color: $red-color;
+        font-weight: bold;
+      }
+    }
+    p {
+      font-size: 16px;
+      padding-right: 10%;
+    }
+    button {
+      background-color: $orange-color;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 16px 32px;
+      border-radius: 12px;
+      &:hover {
+        background-color: $peach;
+      }
+    }
+    .suricate {
+      position: relative;
+      padding-top: 50px;
+      .splash-img {
+        position: absolute;
+      }
+      .suricate-img {
+        border-radius: 50%;
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        width: 55%;
+      }
+    }
+  }
+  .caroussel {
+    margin: 50px auto;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      margin: 20px 10px;
+    }
+  }
+}
+
+/* POP UP FOR VOTE */
+
+.pop-up-voter {
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  height: 70vh;
+  transform: translateX(-50%);
+  .pop-content {
+    p {
+      font-weight: bold;
+    }
+    .menu-content {
+      p {
+        font-weight: bold;
+        padding: 10px;
+        ul {
+          li {
+            font-weight: normal;
+            input {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 20px;
+  p {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+  a {
+    &:hover {
+      color: $orange-color;
+    }
+  }
+}
+
+/* CAROUSEL */
+
+.carousel {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: $red-color;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 10px rgb(66, 66, 66);
+  background: $white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  img {
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
