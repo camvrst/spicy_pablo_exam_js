@@ -52,7 +52,7 @@ function PopVoter({ title, bgColor, visibility, toggleVisibility }) {
               return index === 0 ? (
                 <ul>
                   <li>
-                    <input type="checkbox" name="entree0" checked />
+                    <input type="checkbox" name="entree0" />
                     <label htmlFor="entree0">{entrees[0]}</label>
                   </li>
                   <li>
@@ -77,7 +77,7 @@ function PopVoter({ title, bgColor, visibility, toggleVisibility }) {
                     <label htmlFor="plat0">{plats[0]}</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="plat1" checked />
+                    <input type="checkbox" name="plat1" />
                     <label htmlFor="plat1">{plats[1]}</label>
                   </li>
                 </ul>
@@ -98,7 +98,7 @@ function PopVoter({ title, bgColor, visibility, toggleVisibility }) {
                     <label htmlFor="dessert0">{desserts[0]}</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="dessert1" checked />
+                    <input type="checkbox" name="dessert1" />
                     <label htmlFor="dessert1">{desserts[1]}</label>
                   </li>
                 </ul>

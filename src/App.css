@@ -216,6 +216,10 @@ header nav ul li:hover:before, header nav ul li:hover:after {
   margin: 20px 10px;
 }
 
+.emoji {
+  color: #f29c7b;
+}
+
 /* POP UP FOR VOTE */
 .pop-up-voter {
   position: absolute;

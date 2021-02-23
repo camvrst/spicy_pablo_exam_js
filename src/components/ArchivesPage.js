@@ -7,12 +7,13 @@ function ArchivesPage({ toggleVisibility }) {
             <span>Archives</span> <br /> Gustatives
           </h2>
           <p>
-            Un menu de la Maison Salvi vous a séduit ? Vous refusez de croire
+            Un menu de la Maison Salvi vous a séduit ?{" "}
+            <i className="fas fa-grin-hearts emoji" /> Vous refusez de croire
             qu'il ne reviendra pas à la carte ?
           </p>
           <p>
             Je vous propose de passer en revue les recettes, et donner votre
-            avis. Choisissez votre favori !
+            avis. Choisissez votre favori ! <i className="fas fa-star emoji" />
           </p>
           <button onClick={() => toggleVisibility(true)}>Voter</button>
         </div>
